@@ -21,7 +21,6 @@
 		FE6A53D32BEE72DB0073C68E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53D22BEE72DB0073C68E /* MenuView.swift */; };
 		FE6A53D52BEE79780073C68E /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53D42BEE79780073C68E /* MenuCoordinator.swift */; };
 		FE6A53DB2BEE83820073C68E /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE6A53DA2BEE83820073C68E /* Networking */; };
-		FE6A53E12BEE8EB30073C68E /* AgePredictionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53E02BEE8EB30073C68E /* AgePredictionAlertView.swift */; };
 		FE6A53E52BEE8FAB0073C68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6A53E42BEE8FAB0073C68E /* LaunchScreen.storyboard */; };
 		FEA4FF3F2BEF619D009B07AF /* ViewWithColor in Frameworks */ = {isa = PBXBuildFile; productRef = FEA4FF3E2BEF619D009B07AF /* ViewWithColor */; };
 		FEF2AFB92BEF30C60039F621 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FEF2AFB82BEF30C60039F621 /* Networking */; };
@@ -36,7 +35,6 @@
 		FE6A53CD2BEE6AF10073C68E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FE6A53D22BEE72DB0073C68E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		FE6A53D42BEE79780073C68E /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
-		FE6A53E02BEE8EB30073C68E /* AgePredictionAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgePredictionAlertView.swift; sourceTree = "<group>"; };
 		FE6A53E42BEE8FAB0073C68E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				FE6A53D22BEE72DB0073C68E /* MenuView.swift */,
-				FE6A53E02BEE8EB30073C68E /* AgePredictionAlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,7 +227,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE6A53E12BEE8EB30073C68E /* AgePredictionAlertView.swift in Sources */,
 				FE6A53CA2BEE6A620073C68E /* Coordinator.swift in Sources */,
 				FE6A53D52BEE79780073C68E /* MenuCoordinator.swift in Sources */,
 				FE6A53D32BEE72DB0073C68E /* MenuView.swift in Sources */,
