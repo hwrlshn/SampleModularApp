@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import AgePredictionView
 
 protocol MenuViewDelegate: AnyObject {
     func userTappedAgePrediction(by name: String)
     func userTappedColorPicker()
     func userTappedViewWithColor()
+    func userTappedInterestingFact()
 }
 
 struct MenuView: View {
@@ -21,6 +23,7 @@ struct MenuView: View {
     
     @State private var isShowAgePredictionAlert = false
     @State private var userInput: String = ""
+    @State private var isDelegateWasCalled = false
     
     // MARK: - View
     
@@ -52,6 +55,14 @@ struct MenuView: View {
                     Text("View with choosed color\n(from ColorPicker)")
                 }
                 
+                // MARK: - Interesting fact
+                
+                Button {
+                    delegate?.userTappedInterestingFact()
+                } label: {
+                    Text("Interesting fact about number\n(by your predicted age)")
+                }
+                
             }
         }
         .overlay(
@@ -59,11 +70,14 @@ struct MenuView: View {
                 if isShowAgePredictionAlert {
                     AgePredictionAlertView(
                         isShowAgePredictionAlert: $isShowAgePredictionAlert,
-                        delegate: .constant(delegate),
-                        userInput: $userInput)
+                        userInput: $userInput,
+                        isDelegateWasCalled: $isDelegateWasCalled)
                 }
             }
         )
+        .onChange(of: isDelegateWasCalled) { _ in
+            delegate?.userTappedAgePrediction(by: userInput)
+        }
     }
 }
 

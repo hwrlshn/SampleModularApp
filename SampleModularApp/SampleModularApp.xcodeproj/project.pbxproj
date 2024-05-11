@@ -11,6 +11,8 @@
 		FE2E0F1C2BEE925D00308264 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE2E0F1B2BEE925D00308264 /* Networking */; };
 		FE2E0F1F2BEE927800308264 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE2E0F1E2BEE927800308264 /* Networking */; };
 		FE2E0F222BEE934E00308264 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE2E0F212BEE934E00308264 /* Networking */; };
+		FE3D09B12BEF659F009CD5E1 /* AgePredictionView in Frameworks */ = {isa = PBXBuildFile; productRef = FE3D09B02BEF659F009CD5E1 /* AgePredictionView */; };
+		FE3D09B42BEF6CB1009CD5E1 /* ViewForInterestingFact in Frameworks */ = {isa = PBXBuildFile; productRef = FE3D09B32BEF6CB1009CD5E1 /* ViewForInterestingFact */; };
 		FE4F0D152BEF542200C00CBB /* ColorPickerView in Frameworks */ = {isa = PBXBuildFile; productRef = FE4F0D142BEF542200C00CBB /* ColorPickerView */; };
 		FE6A53B52BEE665E0073C68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53B42BEE665E0073C68E /* AppDelegate.swift */; };
 		FE6A53BE2BEE665F0073C68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6A53BD2BEE665F0073C68E /* Assets.xcassets */; };
@@ -18,9 +20,7 @@
 		FE6A53CE2BEE6AF10073C68E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53CD2BEE6AF10073C68E /* AppCoordinator.swift */; };
 		FE6A53D32BEE72DB0073C68E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53D22BEE72DB0073C68E /* MenuView.swift */; };
 		FE6A53D52BEE79780073C68E /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53D42BEE79780073C68E /* MenuCoordinator.swift */; };
-		FE6A53D82BEE82B70073C68E /* AgePredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53D72BEE82B70073C68E /* AgePredictionView.swift */; };
 		FE6A53DB2BEE83820073C68E /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE6A53DA2BEE83820073C68E /* Networking */; };
-		FE6A53E12BEE8EB30073C68E /* AgePredictionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53E02BEE8EB30073C68E /* AgePredictionAlertView.swift */; };
 		FE6A53E52BEE8FAB0073C68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6A53E42BEE8FAB0073C68E /* LaunchScreen.storyboard */; };
 		FEA4FF3F2BEF619D009B07AF /* ViewWithColor in Frameworks */ = {isa = PBXBuildFile; productRef = FEA4FF3E2BEF619D009B07AF /* ViewWithColor */; };
 		FEF2AFB92BEF30C60039F621 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FEF2AFB82BEF30C60039F621 /* Networking */; };
@@ -35,8 +35,6 @@
 		FE6A53CD2BEE6AF10073C68E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FE6A53D22BEE72DB0073C68E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		FE6A53D42BEE79780073C68E /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
-		FE6A53D72BEE82B70073C68E /* AgePredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgePredictionView.swift; sourceTree = "<group>"; };
-		FE6A53E02BEE8EB30073C68E /* AgePredictionAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgePredictionAlertView.swift; sourceTree = "<group>"; };
 		FE6A53E42BEE8FAB0073C68E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,9 +45,11 @@
 			files = (
 				FEF2AFB92BEF30C60039F621 /* Networking in Frameworks */,
 				FE2E0F1C2BEE925D00308264 /* Networking in Frameworks */,
+				FE3D09B12BEF659F009CD5E1 /* AgePredictionView in Frameworks */,
 				FE2E0F192BEE923700308264 /* Networking in Frameworks */,
 				FEA4FF3F2BEF619D009B07AF /* ViewWithColor in Frameworks */,
 				FE4F0D152BEF542200C00CBB /* ColorPickerView in Frameworks */,
+				FE3D09B42BEF6CB1009CD5E1 /* ViewForInterestingFact in Frameworks */,
 				FE2E0F1F2BEE927800308264 /* Networking in Frameworks */,
 				FE2E0F222BEE934E00308264 /* Networking in Frameworks */,
 				FE6A53DB2BEE83820073C68E /* Networking in Frameworks */,
@@ -99,7 +99,6 @@
 		FE6A53CB2BEE6ADB0073C68E /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
-				FE6A53D62BEE82AD0073C68E /* AgePrediction */,
 				FE6A53CF2BEE6E7C0073C68E /* Menu */,
 				FE6A53CC2BEE6AE70073C68E /* Common */,
 			);
@@ -123,14 +122,6 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
-		FE6A53D62BEE82AD0073C68E /* AgePrediction */ = {
-			isa = PBXGroup;
-			children = (
-				FEF2AFBA2BEF31C50039F621 /* Views */,
-			);
-			path = AgePrediction;
-			sourceTree = "<group>";
-		};
 		FE6A53E22BEE8F560073C68E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,15 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				FE6A53D22BEE72DB0073C68E /* MenuView.swift */,
-				FE6A53E02BEE8EB30073C68E /* AgePredictionAlertView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FEF2AFBA2BEF31C50039F621 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FE6A53D72BEE82B70073C68E /* AgePredictionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +163,8 @@
 				FEF2AFB82BEF30C60039F621 /* Networking */,
 				FE4F0D142BEF542200C00CBB /* ColorPickerView */,
 				FEA4FF3E2BEF619D009B07AF /* ViewWithColor */,
+				FE3D09B02BEF659F009CD5E1 /* AgePredictionView */,
+				FE3D09B32BEF6CB1009CD5E1 /* ViewForInterestingFact */,
 			);
 			productName = SampleModularApp;
 			productReference = FE6A53B12BEE665E0073C68E /* SampleModularApp.app */;
@@ -214,6 +198,8 @@
 				FEF2AFB72BEF30C60039F621 /* XCLocalSwiftPackageReference "../Networking" */,
 				FE4F0D132BEF542200C00CBB /* XCLocalSwiftPackageReference "../ColorPickerView" */,
 				FEA4FF3D2BEF619D009B07AF /* XCLocalSwiftPackageReference "../ViewWithColor" */,
+				FE3D09AF2BEF659F009CD5E1 /* XCLocalSwiftPackageReference "../AgePredictionView" */,
+				FE3D09B22BEF6CB1009CD5E1 /* XCLocalSwiftPackageReference "../ViewForInterestingFact" */,
 			);
 			productRefGroup = FE6A53B22BEE665E0073C68E /* Products */;
 			projectDirPath = "";
@@ -241,9 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE6A53E12BEE8EB30073C68E /* AgePredictionAlertView.swift in Sources */,
 				FE6A53CA2BEE6A620073C68E /* Coordinator.swift in Sources */,
-				FE6A53D82BEE82B70073C68E /* AgePredictionView.swift in Sources */,
 				FE6A53D52BEE79780073C68E /* MenuCoordinator.swift in Sources */,
 				FE6A53D32BEE72DB0073C68E /* MenuView.swift in Sources */,
 				FE6A53CE2BEE6AF10073C68E /* AppCoordinator.swift in Sources */,
@@ -465,6 +449,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		FE3D09AF2BEF659F009CD5E1 /* XCLocalSwiftPackageReference "../AgePredictionView" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../AgePredictionView;
+		};
+		FE3D09B22BEF6CB1009CD5E1 /* XCLocalSwiftPackageReference "../ViewForInterestingFact" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../ViewForInterestingFact;
+		};
 		FE4F0D132BEF542200C00CBB /* XCLocalSwiftPackageReference "../ColorPickerView" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../ColorPickerView;
@@ -495,6 +487,14 @@
 		FE2E0F212BEE934E00308264 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		FE3D09B02BEF659F009CD5E1 /* AgePredictionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AgePredictionView;
+		};
+		FE3D09B32BEF6CB1009CD5E1 /* ViewForInterestingFact */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ViewForInterestingFact;
 		};
 		FE4F0D142BEF542200C00CBB /* ColorPickerView */ = {
 			isa = XCSwiftPackageProductDependency;

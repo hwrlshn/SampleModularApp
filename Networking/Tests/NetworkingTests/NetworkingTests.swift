@@ -8,4 +8,10 @@ final class NetworkingTests: XCTestCase {
             XCTAssertEqual(error != nil, true, "Something went wrong")
         }
     }
+    
+    func testInterestingFact() throws {
+        Networking.shared.interestingFact(by: 73) { data, error in
+            XCTAssertEqual(error != nil, true, "Something went wrong")
+        }
+    }
 }

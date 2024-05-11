@@ -6,7 +6,7 @@ import SwiftUI
 @available(iOS 14.0, *)
 public struct ViewWithColor: View {
     
-    let color: Color
+    private let color: Color
     
     public init(color: Color) {
         self.color = color

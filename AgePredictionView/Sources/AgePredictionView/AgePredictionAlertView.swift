@@ -7,13 +7,23 @@
 
 import SwiftUI
 
-struct AgePredictionAlertView: View {
+@available(iOS 13.0, *)
+public struct AgePredictionAlertView: View {
     
-    @Binding var isShowAgePredictionAlert: Bool
-    @Binding var delegate: MenuViewDelegate?
-    @Binding var userInput: String
+    @Binding public var isShowAgePredictionAlert: Bool
+    @Binding public var userInput: String
+    @Binding public var isDelegateWasCalled: Bool
     
-    var body: some View {
+    public init(
+        isShowAgePredictionAlert: Binding<Bool>,
+        userInput: Binding<String>,
+        isDelegateWasCalled: Binding<Bool>) {
+            self._isShowAgePredictionAlert = isShowAgePredictionAlert
+            self._userInput = userInput
+            self._isDelegateWasCalled = isDelegateWasCalled
+        }
+    
+    public var body: some View {
         ZStack {
             Color.black.opacity(0.3)
                 .edgesIgnoringSafeArea(.all)
@@ -25,9 +35,7 @@ struct AgePredictionAlertView: View {
                 
                 Button(action: {
                     isShowAgePredictionAlert = false
-                    delegate?.userTappedAgePrediction(by: userInput)
-                    userInput = ""
-                    delegate = nil
+                    isDelegateWasCalled.toggle()
                 }) {
                     Text("OK")
                 }
@@ -40,6 +48,9 @@ struct AgePredictionAlertView: View {
             .background(Color.white)
             .cornerRadius(16)
             .padding(50)
+        }
+        .onAppear {
+            userInput = ""
         }
     }
 }
