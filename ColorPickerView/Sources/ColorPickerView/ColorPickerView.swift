@@ -3,13 +3,20 @@
 
 import SwiftUI
 
+public protocol ColorPickerDelegate: AnyObject {
+    @available(iOS 13.0, *)
+    func shareColor(color: Color)
+}
+
 @available(iOS 14.0, *)
 public struct ColorPickerView: View {
     
     @State private var selectedColor: Color
     
-    public init() {
-        self.selectedColor = Color.red
+    public weak var delegate: ColorPickerDelegate?
+    
+    public init(color: Color) {
+        self.selectedColor = color
     }
     
     public var body: some View {
@@ -23,10 +30,13 @@ public struct ColorPickerView: View {
                 .padding()
         }
         .padding()
+        .onChange(of: selectedColor) { color in
+            delegate?.shareColor(color: color)
+        }
     }
 }
 
 @available(iOS 14.0, *)
 #Preview {
-    ColorPickerView()
+    ColorPickerView(color: .red)
 }
