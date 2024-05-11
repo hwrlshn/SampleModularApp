@@ -9,6 +9,7 @@ import SwiftUI
 
 protocol MenuViewDelegate: AnyObject {
     func userTappedAgePrediction(by name: String)
+    func userTappedColorPicker()
 }
 
 struct MenuView: View {
@@ -29,6 +30,12 @@ struct MenuView: View {
                     isShowAgePredictionAlert = true
                 } label: {
                     Text("Age prediction by name")
+                }
+                
+                Button {
+                    delegate?.userTappedColorPicker()
+                } label: {
+                    Text("Color picker")
                 }
             }
         }

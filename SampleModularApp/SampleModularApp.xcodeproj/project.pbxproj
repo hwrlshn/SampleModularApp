@@ -11,6 +11,7 @@
 		FE2E0F1C2BEE925D00308264 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE2E0F1B2BEE925D00308264 /* Networking */; };
 		FE2E0F1F2BEE927800308264 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE2E0F1E2BEE927800308264 /* Networking */; };
 		FE2E0F222BEE934E00308264 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE2E0F212BEE934E00308264 /* Networking */; };
+		FE4F0D152BEF542200C00CBB /* ColorPickerView in Frameworks */ = {isa = PBXBuildFile; productRef = FE4F0D142BEF542200C00CBB /* ColorPickerView */; };
 		FE6A53B52BEE665E0073C68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53B42BEE665E0073C68E /* AppDelegate.swift */; };
 		FE6A53BE2BEE665F0073C68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6A53BD2BEE665F0073C68E /* Assets.xcassets */; };
 		FE6A53CA2BEE6A620073C68E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53C92BEE6A620073C68E /* Coordinator.swift */; };
@@ -21,6 +22,7 @@
 		FE6A53DB2BEE83820073C68E /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FE6A53DA2BEE83820073C68E /* Networking */; };
 		FE6A53E12BEE8EB30073C68E /* AgePredictionAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6A53E02BEE8EB30073C68E /* AgePredictionAlertView.swift */; };
 		FE6A53E52BEE8FAB0073C68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6A53E42BEE8FAB0073C68E /* LaunchScreen.storyboard */; };
+		FEF2AFB92BEF30C60039F621 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = FEF2AFB82BEF30C60039F621 /* Networking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +44,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF2AFB92BEF30C60039F621 /* Networking in Frameworks */,
 				FE2E0F1C2BEE925D00308264 /* Networking in Frameworks */,
 				FE2E0F192BEE923700308264 /* Networking in Frameworks */,
+				FE4F0D152BEF542200C00CBB /* ColorPickerView in Frameworks */,
 				FE2E0F1F2BEE927800308264 /* Networking in Frameworks */,
 				FE2E0F222BEE934E00308264 /* Networking in Frameworks */,
 				FE6A53DB2BEE83820073C68E /* Networking in Frameworks */,
@@ -93,6 +97,7 @@
 		FE6A53CB2BEE6ADB0073C68E /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
+				FEF2AFBE2BEF4E080039F621 /* ColorPick */,
 				FE6A53D62BEE82AD0073C68E /* AgePrediction */,
 				FE6A53CF2BEE6E7C0073C68E /* Menu */,
 				FE6A53CC2BEE6AE70073C68E /* Common */,
@@ -120,7 +125,7 @@
 		FE6A53D62BEE82AD0073C68E /* AgePrediction */ = {
 			isa = PBXGroup;
 			children = (
-				FE6A53D72BEE82B70073C68E /* AgePredictionView.swift */,
+				FEF2AFBA2BEF31C50039F621 /* Views */,
 			);
 			path = AgePrediction;
 			sourceTree = "<group>";
@@ -140,6 +145,21 @@
 				FE6A53E02BEE8EB30073C68E /* AgePredictionAlertView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FEF2AFBA2BEF31C50039F621 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE6A53D72BEE82B70073C68E /* AgePredictionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FEF2AFBE2BEF4E080039F621 /* ColorPick */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ColorPick;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +184,8 @@
 				FE2E0F1B2BEE925D00308264 /* Networking */,
 				FE2E0F1E2BEE927800308264 /* Networking */,
 				FE2E0F212BEE934E00308264 /* Networking */,
+				FEF2AFB82BEF30C60039F621 /* Networking */,
+				FE4F0D142BEF542200C00CBB /* ColorPickerView */,
 			);
 			productName = SampleModularApp;
 			productReference = FE6A53B12BEE665E0073C68E /* SampleModularApp.app */;
@@ -194,7 +216,8 @@
 			);
 			mainGroup = FE6A53A82BEE665E0073C68E;
 			packageReferences = (
-				FE2E0F202BEE934E00308264 /* XCLocalSwiftPackageReference "../Networking" */,
+				FEF2AFB72BEF30C60039F621 /* XCLocalSwiftPackageReference "../Networking" */,
+				FE4F0D132BEF542200C00CBB /* XCLocalSwiftPackageReference "../ColorPickerView" */,
 			);
 			productRefGroup = FE6A53B22BEE665E0073C68E /* Products */;
 			projectDirPath = "";
@@ -367,8 +390,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,8 +424,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -446,7 +469,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		FE2E0F202BEE934E00308264 /* XCLocalSwiftPackageReference "../Networking" */ = {
+		FE4F0D132BEF542200C00CBB /* XCLocalSwiftPackageReference "../ColorPickerView" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../ColorPickerView;
+		};
+		FEF2AFB72BEF30C60039F621 /* XCLocalSwiftPackageReference "../Networking" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Networking;
 		};
@@ -469,7 +496,15 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
 		};
+		FE4F0D142BEF542200C00CBB /* ColorPickerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ColorPickerView;
+		};
 		FE6A53DA2BEE83820073C68E /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		FEF2AFB82BEF30C60039F621 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
 		};

@@ -27,6 +27,7 @@ struct AgePredictionAlertView: View {
                     isShowAgePredictionAlert = false
                     delegate?.userTappedAgePrediction(by: userInput)
                     userInput = ""
+                    delegate = nil
                 }) {
                     Text("OK")
                 }
