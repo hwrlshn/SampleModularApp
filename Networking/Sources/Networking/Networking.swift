@@ -2,11 +2,7 @@
 // https://docs.swift.org/swift-book
 
 import Foundation
-
-public struct AgePredictionModel: Codable {
-    public let name: String
-    public let age: Int
-}
+import AgePredictionModel
 
 final public class Networking {
     

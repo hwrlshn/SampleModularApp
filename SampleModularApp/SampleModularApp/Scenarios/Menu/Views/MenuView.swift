@@ -9,6 +9,8 @@ import SwiftUI
 
 protocol MenuViewDelegate: AnyObject {
     func userTappedAgePrediction(by name: String)
+    func userTappedColorPicker()
+    func userTappedViewWithColor()
 }
 
 struct MenuView: View {
@@ -25,11 +27,31 @@ struct MenuView: View {
     var body: some View {
         ZStack {
             List {
+                
+                // MARK: - Age prediction
+                
                 Button {
                     isShowAgePredictionAlert = true
                 } label: {
                     Text("Age prediction by name")
                 }
+                
+                // MARK: - Color picker
+                
+                Button {
+                    delegate?.userTappedColorPicker()
+                } label: {
+                    Text("Color picker")
+                }
+                
+                // MARK: - View with color
+                
+                Button {
+                    delegate?.userTappedViewWithColor()
+                } label: {
+                    Text("View with choosed color\n(from ColorPicker)")
+                }
+                
             }
         }
         .overlay(

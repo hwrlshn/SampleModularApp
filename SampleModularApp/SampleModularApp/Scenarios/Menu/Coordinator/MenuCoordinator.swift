@@ -8,6 +8,8 @@
 import UIKit
 import SwiftUI
 import Networking
+import ColorPickerView
+import ViewWithColor
 
 protocol MenuCoordinatorDelegate: AnyObject {
     func menuCoordinatorDidFinish()
@@ -18,6 +20,8 @@ final class MenuCoordinator: NavigationCoordinator {
     weak var delegate: MenuCoordinatorDelegate?
     
     var navigationController: UINavigationController
+    
+    private var colorForView: Color = .red
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -35,17 +39,47 @@ final class MenuCoordinator: NavigationCoordinator {
     }
 }
 
+// MARK: - Menu delegate -
+
 extension MenuCoordinator: MenuViewDelegate {
+    
     func userTappedAgePrediction(by name: String) {
         Networking.shared.agePrediction(by: name) { [weak self] result, error in
             guard error == nil
             else { return }
             DispatchQueue.main.async {
                 let view = AgePredictionView(name: result?.name ?? "", age: result?.age ?? 0)
-                let vc = UIHostingController(rootView: view)
+                let vc: UIHostingController = .init(rootView: view)
                 self?.navigationController.pushViewController(vc, animated: true)
             }
         }
+    }
+    
+    func userTappedColorPicker() {
+        DispatchQueue.main.async { [weak self] in
+            var view = ColorPickerView(color: self?.colorForView ?? .red)
+            view.delegate = self
+            let vc: UIHostingController = .init(rootView: view)
+            self?.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func userTappedViewWithColor() {
+        DispatchQueue.main.async { [weak self] in
+            let view = ViewWithColor(color: self?.colorForView ?? .red)
+            let vc: UIHostingController = .init(rootView: view)
+            self?.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+}
+
+// MARK: - Color picker delegate -
+
+extension MenuCoordinator: ColorPickerDelegate {
+    
+    func shareColor(color: Color) {
+        colorForView = color
     }
     
 }
