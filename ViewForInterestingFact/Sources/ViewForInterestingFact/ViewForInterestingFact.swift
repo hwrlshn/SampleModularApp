@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0.0, *)
+@available(iOS 14.0.0, *)
 public struct ViewForInterestingFact: View {
     
     private let number: Int
@@ -25,6 +25,10 @@ public struct ViewForInterestingFact: View {
                     .font(.title)
                 Text(fact)
                     .font(.subheadline)
+                Spacer()
+                    .frame(height: 100)
+                Text("(via numbersapi.com)")
+                    .font(.caption2)
             }
             .padding()
             Spacer()
@@ -33,7 +37,7 @@ public struct ViewForInterestingFact: View {
     }
 }
 
-@available(iOS 13.0.0, *)
+@available(iOS 14.0.0, *)
 #Preview {
     ViewForInterestingFact(
         number: 0,
