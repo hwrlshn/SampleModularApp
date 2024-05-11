@@ -10,6 +10,8 @@ import SwiftUI
 import Networking
 import ColorPickerView
 import ViewWithColor
+import AgePredictionView
+import ViewForInterestingFact
 
 protocol MenuCoordinatorDelegate: AnyObject {
     func menuCoordinatorDidFinish()
@@ -22,6 +24,7 @@ final class MenuCoordinator: NavigationCoordinator {
     var navigationController: UINavigationController
     
     private var colorForView: Color = .red
+    private var predictedAge = 0
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -47,6 +50,7 @@ extension MenuCoordinator: MenuViewDelegate {
         Networking.shared.agePrediction(by: name) { [weak self] result, error in
             guard error == nil
             else { return }
+            self?.predictedAge = result?.age ?? 0
             DispatchQueue.main.async {
                 let view = AgePredictionView(name: result?.name ?? "", age: result?.age ?? 0)
                 let vc: UIHostingController = .init(rootView: view)
@@ -69,6 +73,18 @@ extension MenuCoordinator: MenuViewDelegate {
             let view = ViewWithColor(color: self?.colorForView ?? .red)
             let vc: UIHostingController = .init(rootView: view)
             self?.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func userTappedInterestingFact() {
+        Networking.shared.interestingFact(by: predictedAge) { [weak self] result, error in
+            guard error == nil
+            else { return }
+            DispatchQueue.main.async {
+                let view = ViewForInterestingFact(number: self?.predictedAge ?? 0, fact: result ?? "No fact")
+                let vc: UIHostingController = .init(rootView: view)
+                self?.navigationController.pushViewController(vc, animated: true)
+            }
         }
     }
     

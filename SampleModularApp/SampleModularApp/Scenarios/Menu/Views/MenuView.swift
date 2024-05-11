@@ -11,6 +11,7 @@ protocol MenuViewDelegate: AnyObject {
     func userTappedAgePrediction(by name: String)
     func userTappedColorPicker()
     func userTappedViewWithColor()
+    func userTappedInterestingFact()
 }
 
 struct MenuView: View {
@@ -50,6 +51,14 @@ struct MenuView: View {
                     delegate?.userTappedViewWithColor()
                 } label: {
                     Text("View with choosed color\n(from ColorPicker)")
+                }
+                
+                // MARK: - Interesting fact
+                
+                Button {
+                    delegate?.userTappedInterestingFact()
+                } label: {
+                    Text("Interesting fact about number\n(by your predicted age)")
                 }
                 
             }

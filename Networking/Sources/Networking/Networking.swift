@@ -8,8 +8,6 @@ final public class Networking {
     
     public static let shared: Networking = .init()
     
-    private init() { }
-    
     public func agePrediction(
         by name: String,
         completion: @escaping (AgePredictionModel?, Error?) -> Void ) {
@@ -25,4 +23,18 @@ final public class Networking {
             }
             .resume()
         }
+    
+    public func interestingFact(by number: Int, completion: @escaping (String?, Error?) -> Void) {
+        guard let url: URL = .init(string: "http://numbersapi.com/\(number)")
+        else { return }
+        let urlRequest: URLRequest = .init(url: url)
+        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            guard let data = data
+            else { return }
+            let encodedData = String.init(data: data, encoding: .utf8)
+            completion(encodedData, error)
+        }
+        .resume()
+    }
+    
 }

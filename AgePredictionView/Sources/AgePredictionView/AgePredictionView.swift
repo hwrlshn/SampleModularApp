@@ -1,18 +1,20 @@
-//
-//  AgePredictionView.swift
-//  SampleModularApp
-//
-//  Created by Bohdan Hawrylyshyn on 10.05.24.
-//
+// The Swift Programming Language
+// https://docs.swift.org/swift-book
 
 import SwiftUI
 
-struct AgePredictionView: View {
+@available(iOS 14.0.0, *)
+public struct AgePredictionView: View {
     
     let name: String
     let age: Int
     
-    var body: some View {
+    public init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+    
+    public var body: some View {
         VStack {
             Text("Your name: \(name)")
                 .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -26,6 +28,7 @@ struct AgePredictionView: View {
     }
 }
 
+@available(iOS 14.0.0, *)
 #Preview {
     AgePredictionView(
         name: "Name",
